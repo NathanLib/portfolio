@@ -5,6 +5,39 @@
 	text-shadow: $offset $offset $colour-neutrals-white;
 }
 
+@mixin fluid-font(
+	$responsive,
+	$min,
+	$min-lh,
+	$max: false,
+	$max-lh: false,
+	$fallback: false
+) {
+	$responsive-unitless: $responsive / ($responsive - $responsive + 1);
+	$dimension: if(unit($responsive) == "vh", "height", "width");
+	$min-breakpoint: $min / $responsive-unitless * 100;
+
+	@media (max-#{$dimension}: #{$min-breakpoint}) {
+		font-size: $min;
+		line-height: $min-lh;
+	}
+
+	@if $max {
+		$max-breakpoint: $max / $responsive-unitless * 100;
+		@media (min-#{$dimension}: #{$max-breakpoint}) {
+			font-size: $max;
+			line-height: $max-lh;
+		}
+	}
+
+	@if $fallback {
+		font-size: $fallback;
+	}
+
+	font-size: $responsive;
+	line-height: calc(#{$responsive-unitless}vw + 8px);
+}
+
 @mixin border($colour: $colour-neutrals-white) {
 	border: 0.1rem solid $colour;
 }
