@@ -36,10 +36,33 @@
 
 body {
 	font-family: "Poppins";
-	color: $colour-accents-purple;
-	font-size: 2rem;
-	font-weight: 100;
-	line-height: 1.7;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	letter-spacing: 0.02rem;
+	color: $colour-neutrals-white-30;
+}
+
+.small {
+	font-size: 0.875rem;
+	line-height: 1.1875rem;
+}
+
+.label {
+	font-weight: 600;
+	font-size: 0.875rem;
+	line-height: 1.125rem;
+	letter-spacing: 0.08rem;
+	text-transform: uppercase;
+}
+
+.tab {
+	font-weight: 600;
+	font-size: 1.5rem;
+	letter-spacing: 0.06rem;
+	text-transform: uppercase;
+	font-feature-settings: "tnum" on, "lnum" on, "ordn" on;
 }
 
 h1,
