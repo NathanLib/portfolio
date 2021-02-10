@@ -1,11 +1,11 @@
 @mixin heading-shadow(
-	$colour: lightness-shift($colour-primary),
+	$colour: lightness-shift($colour-neutrals-black-10),
 	$offset: $heading-shadow-size
 ) {
-	text-shadow: $offset $offset $colour;
+	text-shadow: $offset $offset $colour-neutrals-white;
 }
 
-@mixin border($colour: $colour-primary) {
+@mixin border($colour: $colour-neutrals-white) {
 	border: 0.1rem solid $colour;
 }
 
@@ -27,13 +27,13 @@
 @mixin btn {
 	padding: $grid-gutter;
 	@include border;
-	color: $colour-primary;
-	background: $colour-secondary;
+	color: $colour-accents-blue;
+	background: $colour-neutrals-white;
 	cursor: pointer;
 
 	&:hover {
-		background: $colour-primary;
-		color: $colour-accent;
+		background: $colour-neutrals-white;
+		color: $colour-accents-blue;
 	}
 
 	&--full-width {

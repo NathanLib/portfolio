@@ -16,7 +16,7 @@
 	"bugs": {
 		"url": "https://github.com/NathanLib/portfolio/issues"
 	},
-	"homepage": "https://github.com/NathanLib/portfolio#readme",
+	"homepage": "https://github.com/NathanLib/portfolio/home.html",
 	"devDependencies": {
 		"sass": "^1.32.6"
 	}

@@ -1,27 +1,136 @@
+@font-face {
+	font-family: "Poppins";
+	src: url("/fonts/Poppins-Regular.eot");
+	src: url("/fonts/Poppins-Regular.eot?#iefix") format("embedded-opentype"),
+		url("/fonts/Poppins-Regular.woff2") format("woff2"),
+		url("/fonts/Poppins-Regular.woff") format("woff"),
+		url("/fonts/Poppins-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Poppins";
+	src: url("/fonts/Poppins-Bold.eot");
+	src: url("/fonts/Poppins-Bold.eot?#iefix") format("embedded-opentype"),
+		url("/fonts/Poppins-Bold.woff2") format("woff2"),
+		url("/fonts/Poppins-Bold.woff") format("woff"),
+		url("/fonts/Poppins-Bold.ttf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Poppins";
+	src: url("/fonts/Poppins-SemiBold.eot");
+	src: url("/fonts/Poppins-SemiBold.eot?#iefix") format("embedded-opentype"),
+		url("/fonts/Poppins-SemiBold.woff2") format("woff2"),
+		url("/fonts/Poppins-SemiBold.woff") format("woff"),
+		url("/fonts/Poppins-SemiBold.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
-    color: $colour-primary;
-    font-size: 2rem;
-    font-weight: 100;
-    line-height: 1.7;
+	font-family: "Poppins";
+	color: $colour-accents-purple;
+	font-size: 2rem;
+	font-weight: 100;
+	line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Poppins";
+	font-feature-settings: "tnum" on, "lnum" on, "ordn" on;
+	color: $colour-neutrals-white;
+}
+
+h1,
+h2,
+h3 {
+	font-weight: bold;
 }
 
 h1 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 900;
-    font-size: 5rem;
-    font-style: italic;
+	//Fallack
+	font-size: 56px;
+	line-height: 64px;
+
+	font-size: 3.5rem;
+	line-height: 4rem;
+	letter-spacing: 0.04rem;
+}
+
+h2 {
+	//Fallack
+	font-size: 48px;
+	line-height: 56px;
+
+	font-size: 3rem;
+	line-height: 3.5rem;
+	letter-spacing: 0.02rem;
+}
+
+h3 {
+	//Fallack
+	font-size: 40px;
+	line-height: 48px;
+
+	font-size: 2.5rem;
+	line-height: 3rem;
+	letter-spacing: 0.01rem;
+}
+
+h4,
+h5 {
+	font-weight: 600;
+}
+
+h4 {
+	//Fallack
+	font-size: 32px;
+	line-height: 40px;
+
+	font-size: 2rem;
+	line-height: 2.5rem;
+}
+
+h5 {
+	//Fallack
+	font-size: 24px;
+	line-height: 32px;
+
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+
+h6 {
+	//Fallack
+	font-size: 20px;
+	line-height: 24px;
+
+	font-size: 1.25rem;
+	line-height: 1.5rem;
+	font-weight: 500;
 }
 
 textarea {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 100;
-    font-size: 2rem;
+	font-family: "Poppins";
+	font-weight: 100;
+	font-size: 2rem;
 }
 
 button {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 900;
-    font-style: italic;
-    font-size: 2.75rem;
+	font-family: "Poppins";
+	font-weight: 900;
+	font-style: italic;
+	font-size: 2.75rem;
 }

@@ -1,9 +1,21 @@
-$colour-primary: #15DEA5;
-$colour-secondary: #001534;
-$colour-accent: #D6FFF5;
-$colour-white: #fff;
-$colour-invalid: #DB464B;
+$colour-neutrals-black: #00060d;
+$colour-neutrals-black-10: #030d18;
+$colour-neutrals-black-20: #0b121c;
+$colour-neutrals-black-30: #101b26;
 
-$heading-shadow-size: .55rem;
+$colour-neutrals-white: #f1f3f3;
+$colour-neutrals-white-10: #d8e3ee;
+$colour-neutrals-white-20: #b6c4d1;
+$colour-neutrals-white-30: #9ca9b4;
+
+$colour-state-info: #408ac2;
+$colour-state-success: #4da446;
+$colour-state-warning: #c38b3c;
+$colour-state-info: #bf4040;
+
+$colour-accents-blue: linear-gradient(97.02deg, #3eadcf 0%, #abe9cd 100%);
+$colour-accents-purple: linear-gradient(97.01deg, #6d3fff 0%, #ef75c3 105.08%);
+
+$heading-shadow-size: 0.55rem;
 $layout-margin: 6rem;
-$grid-gutter: $layout-margin * .25;
+$grid-gutter: $layout-margin * 0.25;

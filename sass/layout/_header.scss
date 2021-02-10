@@ -1,5 +1,5 @@
 .header {
-	background: $colour-primary;
+	background: $colour-neutrals-white-20;
 	height: 10rem;
 	display: flex;
 	align-items: center;
@@ -8,8 +8,8 @@
 
 	&__logo {
 		font-size: 7rem;
-		color: $colour-secondary;
+		color: $colour-neutrals-white-30;
 		margin-left: 10rem;
-		@include heading-shadow($colour-white);
+		@include heading-shadow($colour-neutrals-black);
 	}
 }
