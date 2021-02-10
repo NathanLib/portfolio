@@ -1,0 +1,23 @@
+{
+	"name": "portfolio",
+	"description": "",
+	"version": "1.0.0",
+	"main": "home.html",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/NathanLib/portfolio.git"
+	},
+	"keywords": [],
+	"author": "Nathan Liboutet",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/NathanLib/portfolio/issues"
+	},
+	"homepage": "https://github.com/NathanLib/portfolio#readme",
+	"devDependencies": {
+		"sass": "^1.32.6"
+	}
+}
