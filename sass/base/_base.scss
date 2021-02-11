@@ -16,4 +16,22 @@ html {
 body {
 	box-sizing: border-box;
 	background: $colour-neutrals-black;
+	padding: $body-padding;
+	transition: 0.5s ease;
+
+	@media (min-width: 768px) {
+		padding: $body-padding-large;
+	}
+}
+
+a {
+	// hyperlink reset
+	&:link,
+	&:visited,
+	&:hover,
+	&:active {
+		color: inherit;
+		text-decoration: none;
+		height: min-content;
+	}
 }

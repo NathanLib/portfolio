@@ -1,24 +1,25 @@
-.nav {
-	padding-right: $layout-margin;
-	flex: 2 1 auto;
-	text-align: right;
-	&__link {
-		display: inline;
-		font-size: 3rem;
-		padding-left: 1.5rem;
-		& a {
-			text-decoration: none;
-			color: $colour-accents-purple;
-		}
-		&--active {
-			color: $colour-accents-blue;
-			&:hover {
-				cursor: default;
-				color: $colour-neutrals-black-10;
+nav {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+
+	.links {
+		display: flex;
+		align-items: center;
+
+		.menu-link {
+			display: flex;
+			align-items: baseline;
+
+			.tab {
+				color: $colour-neutrals-white;
+				margin-left: 0.25rem;
 			}
 		}
-		& a:hover {
-			color: $colour-neutrals-black-20;
+
+		.nav-toggler img {
+			width: 2.5rem;
+			height: 2.5rem;
 		}
 	}
 }

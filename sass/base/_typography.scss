@@ -42,6 +42,10 @@ body {
 	line-height: 1.5rem;
 	letter-spacing: 0.02rem;
 	color: $colour-neutrals-white-30;
+
+	@media (min-width: 768px) {
+		font-size: 1.125rem;
+	}
 }
 
 .small {
