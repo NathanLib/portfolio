@@ -13,32 +13,77 @@
     <div class="container-xxl">
         <header>
             <nav>
-                <div class="brand">
-                    <a href="#home">
+                <div class="nav-bar">
+                    <a href="#home" class="brand">
                         <img src="/img/logo.png" alt="Nathan Liboutet logo">
-                        Nathan Liboutet
+                        <p class="tab">Nathan Liboutet</p>
                     </a>
+
+                    <div class="links">
+                        <a href="#home" class="menu-link">
+                            <p class="small">01.</p>
+                            <p class="tab">Home</p>
+                        </a>
+                        <a href="#news" class="menu-link">
+                            <p class="small">02.</p>
+                            <p class="tab">Works</p>
+                        </a>
+                        <a href="#contact" class="menu-link">
+                            <p class="small">03.</p>
+                            <p class="tab">About me</p>
+                        </a>
+                        <a href="#about" class="menu-link">
+                            <p class="small">04.</p>
+                            <p class="tab">Contact</p>
+                        </a>
+                        <a href="javascript:void(0);" aria-label="Menu" title="Menu" class="nav-toggler"
+                            id="nav-toggler">
+                            <img src="/img/icons/outline/menu.svg" alt="navbar toggler icon">
+                        </a>
+                    </div>
                 </div>
-                <div class="links">
-                    <a href="#home" class="menu-link">
+
+                <div class="links-toggle display-none" id="menu-toggle">
+                    <a href="#home" class="menu-link-toggle">
                         <p class="small">01.</p>
                         <p class="tab">Home</p>
                     </a>
-                    <a href="#news" class="menu-link">
+                    <a href="#news" class="menu-link-toggle">
                         <p class="small">02.</p>
                         <p class="tab">Works</p>
                     </a>
-                    <a href="#contact" class="menu-link">
+                    <a href="#contact" class="menu-link-toggle">
                         <p class="small">03.</p>
                         <p class="tab">About me</p>
                     </a>
-                    <a href="#about" class="menu-link">
+                    <a href="#about" class="menu-link-toggle">
                         <p class="small">04.</p>
                         <p class="tab">Contact</p>
                     </a>
-                    <a href="javascript:void(0);" class="nav-toggler" onclick="navbarToggle()">
-                        <img src="/img/icons/outline/menu.svg" alt="navbar toggler icon">
-                    </a>
+
+                    <hr class="divider">
+                    </hr>
+
+                    <div class="switch-wrap">
+                        <label class="switch">
+                            <p class="switch-label">Dark mode</p>
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+
+                    <div class="socials-menu">
+                        <a href="#" target="" aria-label="Dribbble" title="Dribbble">
+                            <img src="/img/icons/brand/dribbble.svg" alt="Dribbble brand icon">
+                        </a>
+                        <a href="#" target="_blank">
+                            <img src="/img/icons/brand/github.svg" alt="Github brand icon" aria-label="Github"
+                                title="Github">
+                        </a>
+                        <a href="#" target="_blank" aria-label="LinkedIn" title="LinkedIn">
+                            <img src="/img/icons/brand/linkedIn.svg" alt="LinkedIn brand icon">
+                        </a>
+                    </div>
                 </div>
             </nav>
         </header>
@@ -58,6 +103,6 @@
     </div>
 </body>
 
-<script src="./js/index.js"></script>
+<script src="/js/index.js"></script>
 
 </html>
