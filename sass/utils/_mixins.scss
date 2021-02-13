@@ -78,10 +78,20 @@
 @mixin menu-link {
 	align-items: baseline;
 	padding: 0.5rem 1rem;
-	margin-left: 2rem;
+	border-radius: 0.25rem;
 
 	.tab {
 		color: $colour-neutrals-white;
 		margin-left: 0.25rem;
+	}
+
+	&:hover {
+		background-color: $colour-neutrals-black-20;
+	}
+
+	&:active {
+		background-color: $colour-neutrals-black-30;
+		color: $colour-neutrals-white-20;
+		transform: scale(1.025);
 	}
 }
