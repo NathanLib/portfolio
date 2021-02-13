@@ -23,23 +23,17 @@ nav {
 			align-items: center;
 
 			.menu-link {
+				@include menu-link;
 				display: none;
-				align-items: baseline;
-				padding: 0.5rem 1rem;
-				margin-left: 2rem;
 
 				@media (min-width: 1200px) {
 					display: flex;
-				}
-
-				.tab {
-					color: $colour-neutrals-white;
-					margin-left: 0.25rem;
 				}
 			}
 
 			.nav-toggler {
 				margin-left: 1rem;
+				cursor: pointer;
 
 				img {
 					width: 2.5rem;
@@ -62,19 +56,13 @@ nav {
 		background-color: $colour-neutrals-black;
 
 		.menu-link-toggle {
+			@include menu-link;
 			display: flex;
-			align-items: baseline;
 			margin-left: auto;
-			padding: 0.5rem 1rem;
-			margin-bottom: 2rem;
+			margin-bottom: 1rem;
 
 			@media (min-width: 1200px) {
 				display: none;
-			}
-
-			.tab {
-				color: $colour-neutrals-white;
-				margin-left: 0.25rem;
 			}
 		}
 
@@ -95,6 +83,8 @@ nav {
 			display: flex;
 			justify-content: space-between;
 			width: 100%;
+			position: relative;
+			margin-right: -1rem;
 
 			a {
 				display: flex;
@@ -111,8 +101,35 @@ nav {
 			}
 		}
 
-		.switch {
-			@include switch;
+		.form-switch {
+			padding: 0.5rem 1rem;
+			display: flex;
+			align-items: center;
+			margin: 1.5rem 0;
+
+			.form-check-input {
+				width: 3rem;
+				margin: 0;
+				border-radius: 2.5rem;
+				height: 26px;
+				border: none;
+				transition: 0.3s ease-in-out;
+				background-image: url("/img/switch/knob-dark.svg");
+				background-color: $colour-neutrals-black-30;
+				cursor: pointer;
+				transition: all 0.25s linear;
+
+				&[type="checkbox"]:checked {
+					background-image: url("/img/switch/knob-light.svg");
+					background-color: $colour-neutrals-white-30;
+				}
+			}
+
+			.form-check-label {
+				color: $colour-neutrals-white;
+				margin-left: 0.75rem;
+				cursor: pointer;
+			}
 		}
 	}
 }

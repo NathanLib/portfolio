@@ -75,62 +75,13 @@
 	}
 }
 
-@mixin switch {
-	position: relative;
-	display: inline-block;
-	width: 48px;
-	height: 26px;
+@mixin menu-link {
+	align-items: baseline;
+	padding: 0.5rem 1rem;
+	margin-left: 2rem;
 
-	input {
-		opacity: 0;
-		width: 0;
-		height: 0;
-
-		&:checked + .slider {
-			background-color: $colour-neutrals-white-30;
-		}
-		&:checked + .slider:before {
-			-webkit-transform: translateX(22px);
-			-ms-transform: translateX(22px);
-			transform: translateX(22px);
-		}
-		&:focus + .slider {
-			box-shadow: 0 0 1px $colour-neutrals-white-30;
-		}
-	}
-
-	.slider {
-		position: absolute;
-		cursor: pointer;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background-color: #121b25;
-		-webkit-transition: 0.4s;
-		transition: 0.4s;
-
-		&:before {
-			position: absolute;
-			content: "";
-			height: 22px;
-			width: 22px;
-			left: 2px;
-			bottom: 2px;
-			background-color: #f1f3f3;
-			-webkit-transition: 0.4s;
-			transition: 0.4s;
-		}
-
-		&.round {
-			border-radius: 22px;
-		}
-
-		&.round:before {
-			border-radius: 50%;
-		}
-	}
-
-	&-label {
+	.tab {
+		color: $colour-neutrals-white;
+		margin-left: 0.25rem;
 	}
 }
