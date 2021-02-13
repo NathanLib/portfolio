@@ -1,20 +1,23 @@
-window.addEventListener(
-	"load",
-	function () {
-		var navToggler = document.getElementById("nav-toggler");
-		var switchMode = document.getElementById("switch-mode");
+var jquery = require("jquery");
+window.$ = window.jQuery = jquery;
+import fullpage from "fullpage.js";
 
-		navToggler.addEventListener("click", function () {
-			var menu = document.getElementById("menu-toggle");
-			menu.classList.toggle("display-none");
-		});
+$(window).on("load", function () {
+	// -----------
+	new fullpage("#fullpage", {
+		licenseKey: "OPEN-SOURCE-GPLV3-LICENSE",
+		navigation: true,
+		sectionsColor: ["#ff5f45", "#0798ec", "#fc6c7c", "grey"],
+	});
+	// -----------
 
-		// switchMode.addEventListener("click", function () {
-		// 	var switchModeLabel = document.getElementById("switch-mode-label");
-		// 	switchModeLabel.innerHTML = switchMode.checked
-		// 		? "Light mode"
-		// 		: "Dark mode";
-		// });
-	},
-	false
-);
+	$("#nav-toggler").on("click", () => {
+		$("#menu-toggle").toggleClass("display-none");
+	});
+});
+
+// $("#switch-mode").on("click", () => {
+// 	$("#switch-mode-input").is(":checked")
+// 		? $("#switch-mode-label").text("Light mode")
+// 		: $("#switch-mode-label").text("Dark mode");
+// });

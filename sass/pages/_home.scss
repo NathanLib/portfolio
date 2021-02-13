@@ -1,2 +1,49 @@
 .home {
+	margin-top: 4rem;
+
+	.introduction-wrap {
+		.introduction {
+			padding-left: 2rem;
+			border-left: solid 0.0625rem $colour-neutrals-white-30;
+			border-radius: 0.25px;
+		}
+
+		h1 {
+			margin-bottom: 2rem;
+		}
+
+		span {
+			color: $colour-neutrals-white-30;
+		}
+
+		figure {
+			margin-top: 6rem;
+			font-style: italic;
+		}
+
+		figcaption span {
+			font-weight: bold;
+			font-style: normal;
+		}
+
+		.scroll-discover {
+			display: flex;
+			align-items: center;
+			margin-top: 6rem;
+
+			img {
+				width: 2rem;
+				height: 2rem;
+				margin-left: 1.5rem;
+			}
+		}
+	}
+
+	.introduction-illustration-wrap {
+		padding-left: 5vw;
+
+		img {
+			width: 100%;
+		}
+	}
 }

@@ -4,99 +4,129 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nathan Liboutet</title>
-    <link rel="icon" type="image/png" href="/img/logo.png" />
+    <link rel="icon" type="image/png" href="./img/logo.png" />
 
     <link rel="stylesheet" href="./sass/main.scss">
+
+    <!-- <script type="text/javascript" src="./js/fullPage.js"></script> -->
+    <script type="text/javascript" src="./js/index.js"></script>
 </head>
 
 <body>
-    <div class="container-xxl">
-        <header>
-            <nav>
-                <div class="nav-bar">
-                    <a href="#home" class="brand">
-                        <img src="/img/logo.png" alt="Nathan Liboutet logo">
-                        <p class="tab">Nathan Liboutet</p>
-                    </a>
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <a href="#home" class="brand">
+                    <img src="./img/logo.png" alt="Nathan Liboutet logo">
+                    <p class="tab">Nathan Liboutet</p>
+                </a>
 
-                    <div class="links">
-                        <a href="#home" class="menu-link">
-                            <p class="small">01.</p>
-                            <p class="tab">Home</p>
-                        </a>
-                        <a href="#news" class="menu-link">
-                            <p class="small">02.</p>
-                            <p class="tab">Works</p>
-                        </a>
-                        <a href="#contact" class="menu-link">
-                            <p class="small">03.</p>
-                            <p class="tab">About me</p>
-                        </a>
-                        <a href="#about" class="menu-link">
-                            <p class="small">04.</p>
-                            <p class="tab">Contact</p>
-                        </a>
-                        <btn aria-label="Menu" title="Menu" class="nav-toggler" id="nav-toggler">
-                            <img src="/img/icons/outline/menu.svg" alt="navbar toggler icon">
-                        </btn>
-                    </div>
-                </div>
-
-                <div class="links-toggle display-none" id="menu-toggle">
-                    <a href="#home" class="menu-link-toggle">
+                <div class="links">
+                    <a href="#home" class="menu-link">
                         <p class="small">01.</p>
                         <p class="tab">Home</p>
                     </a>
-                    <a href="#news" class="menu-link-toggle">
+                    <a href="#news" class="menu-link">
                         <p class="small">02.</p>
                         <p class="tab">Works</p>
                     </a>
-                    <a href="#contact" class="menu-link-toggle">
+                    <a href="#contact" class="menu-link">
                         <p class="small">03.</p>
                         <p class="tab">About me</p>
                     </a>
-                    <a href="#about" class="menu-link-toggle">
+                    <a href="#about" class="menu-link">
                         <p class="small">04.</p>
                         <p class="tab">Contact</p>
                     </a>
+                    <btn aria-label="Menu" title="Menu" class="nav-toggler" id="nav-toggler">
+                        <img src="./img/icons/outline/menu.svg" alt="navbar toggler icon">
+                    </btn>
+                </div>
+            </div>
 
-                    <hr class="divider">
-                    </hr>
+            <div class="links-toggle display-none" id="menu-toggle">
+                <a href="#home" class="menu-link-toggle">
+                    <p class="small">01.</p>
+                    <p class="tab">Home</p>
+                </a>
+                <a href="#news" class="menu-link-toggle">
+                    <p class="small">02.</p>
+                    <p class="tab">Works</p>
+                </a>
+                <a href="#contact" class="menu-link-toggle">
+                    <p class="small">03.</p>
+                    <p class="tab">About me</p>
+                </a>
+                <a href="#about" class="menu-link-toggle">
+                    <p class="small">04.</p>
+                    <p class="tab">Contact</p>
+                </a>
 
-                    <div class="form-check form-switch" id="switch-mode">
-                        <input class="form-check-input" type="checkbox" id="modeSwitch">
-                        <label class="form-check-label" for="modeSwitch" id="switch-mode-label">Dark mode</label>
+                <hr class="divider">
+                </hr>
+
+                <div class="form-check form-switch" id="switch-mode">
+                    <input class="form-check-input" type="checkbox" id="switch-mode-input">
+                    <label class="form-check-label" for="switch-mode-input" id="switch-mode-label">Appearance</label>
+                </div>
+
+                <div class="socials-menu">
+                    <a href="#" target="" aria-label="Dribbble" title="Dribbble">
+                        <img src="./img/icons/brand/dribbble.svg" alt="Dribbble brand icon">
+                    </a>
+                    <a href="#" target="_blank">
+                        <img src="./img/icons/brand/github.svg" alt="Github brand icon" aria-label="Github"
+                            title="Github">
+                    </a>
+                    <a href="#" target="_blank" aria-label="LinkedIn" title="LinkedIn">
+                        <img src="./img/icons/brand/linkedIn.svg" alt="LinkedIn brand icon">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-xxl" id="fullpage">
+        <section class="section home">
+            <div class="row">
+                <div class="col-md-6 introduction-wrap">
+                    <div class="introduction">
+                        <h1>
+                            <span>Hi, <br> I'm</span> Nathan
+                        </h1>
+                        <p>
+                            UX/UI Designer, based in Paris and working at Creat’.
+                            <br><br>
+                            A bit of a geek on the edges, I aim to discover everything that has to do with design, from
+                            near and far.
+                        </p>
                     </div>
-
-                    <div class="socials-menu">
-                        <a href="#" target="" aria-label="Dribbble" title="Dribbble">
-                            <img src="/img/icons/brand/dribbble.svg" alt="Dribbble brand icon">
-                        </a>
-                        <a href="#" target="_blank">
-                            <img src="/img/icons/brand/github.svg" alt="Github brand icon" aria-label="Github"
-                                title="Github">
-                        </a>
-                        <a href="#" target="_blank" aria-label="LinkedIn" title="LinkedIn">
-                            <img src="/img/icons/brand/linkedIn.svg" alt="LinkedIn brand icon">
-                        </a>
+                    <figure>
+                        <blockquote>
+                            <p>
+                                “There are three responses to a piece of design - yes, no, and Wow! Wow is the one to
+                                aim for.”
+                            </p>
+                        </blockquote>
+                        <figcaption>— <span>Milton Glaser</span></figcaption>
+                    </figure>
+                    <div class="scroll-discover">
+                        <h6>Discover my <br>work now</h6>
+                        <img src="./img/icons/outline/scroll-down.svg" alt="Scroll down indication">
                     </div>
                 </div>
-            </nav>
-        </header>
-
-        <section class="quote">
-
+                <div class="col-md-6 introduction-illustration-wrap">
+                    <img src="./img/3D/home.png" alt="3D illustration representing Nathan Liboutet">
+                </div>
+            </div>
         </section>
 
-        <h1>Heading 1</h1>
-        <h2>Heading 2</h2>
-        <h3>Heading 3</h3>
-        <h4>Heading 4</h4>
-        <h5>Heading 5</h5>
-        <h6>Heading 6</h6>
+        <section class="section contact">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam reprehenderit illum unde, iste vel
+            consequuntur debitis minima maiores eveniet, doloremque harum laudantium corrupti eius excepturi soluta,
+            sunt ullam? Ducimus, sunt!
+        </section>
     </div>
 </body>
-
-<script src="/js/index.js"></script>
 
 </html>
