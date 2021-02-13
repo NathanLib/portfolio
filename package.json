@@ -23,7 +23,6 @@
 	"dependencies": {
 		"bootstrap": "^5.0.0-beta2",
 		"fullpage": "^1.5.1",
-		"fullpage.js": "^3.0.9",
 		"jquery": "^3.5.1"
 	}
 }
