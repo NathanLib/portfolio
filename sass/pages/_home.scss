@@ -26,15 +26,28 @@
 			font-style: normal;
 		}
 
-		.scroll-discover {
-			display: flex;
-			align-items: center;
-			margin-top: 6rem;
+		.discover {
+			margin-top: 5.5rem;
 
-			img {
-				width: 2rem;
-				height: 2rem;
-				margin-left: 1.5rem;
+			a {
+				display: flex;
+				align-items: center;
+				padding: 0.5rem 1rem;
+				margin-left: -1rem;
+				width: max-content;
+				border-radius: 0.25rem;
+
+				@include states;
+
+				img {
+					width: 2rem;
+					height: 2rem;
+					margin-left: 1.5rem;
+				}
+
+				&:hover img {
+					transform: translate(2px, -2px);
+				}
 			}
 		}
 	}
