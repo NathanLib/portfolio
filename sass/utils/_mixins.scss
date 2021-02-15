@@ -61,12 +61,11 @@
 	cursor: pointer;
 
 	&:hover {
-		background-color: $colour-neutrals-black-20;
+		background-color: $colour-neutrals-black-30;
+		color: $colour-neutrals-white-20;
 	}
 
 	&:active {
-		background-color: $colour-neutrals-black-30;
-		color: $colour-neutrals-white-20;
 		transform: scale(1.025);
 	}
 }

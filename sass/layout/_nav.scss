@@ -88,18 +88,20 @@ nav {
 
 			.form-check-input {
 				width: 3rem;
+				height: 26px;
 				margin: 0;
 				border-radius: 2.5rem;
-				height: 26px;
 				border: none;
-				transition: 0.3s ease-in-out;
-				background-image: url("/img/switch/knob-dark.svg");
+				background-image: url("/img/switch/knob-dark.png");
+				background-size: 22px;
+				background-position: 2px;
 				background-color: $colour-neutrals-black-30;
 				cursor: pointer;
 				transition: all 0.25s linear;
 
 				&[type="checkbox"]:checked {
-					background-image: url("/img/switch/knob-light.svg");
+					background-image: url("/img/switch/knob-light.png");
+					background-position: 24px;
 					background-color: $colour-neutrals-white-30;
 				}
 			}
@@ -111,6 +113,9 @@ nav {
 			}
 
 			@include states;
+			&:hover .form-check-input {
+				background-color: $colour-neutrals-black;
+			}
 		}
 
 		.socials-menu {

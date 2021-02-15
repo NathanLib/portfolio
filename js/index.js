@@ -1,7 +1,10 @@
 var jquery = require("jquery");
 window.$ = window.jQuery = jquery;
+import Grade from "grade-js";
 
 $(window).on("load", function () {
+	Grade(document.querySelectorAll(".gradient-wrap"));
+
 	$("#nav-toggler").on("click", () => {
 		$("#menu-toggle").toggleClass("display-none");
 	});
