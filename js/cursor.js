@@ -4,11 +4,16 @@ const $bigBall = document.querySelector(".cursor__ball--big");
 const $smallBall = document.querySelector(".cursor__ball--small");
 const $hoverables = document.querySelectorAll(".hoverable");
 
-// Listeners
-document.body.addEventListener("mousemove", onMouseMove);
-for (let i = 0; i < $hoverables.length; i++) {
-	$hoverables[i].addEventListener("mouseenter", onMouseHover);
-	$hoverables[i].addEventListener("mouseleave", onMouseHoverOut);
+if (!isOnMobile()) {
+	// Listeners
+	document.body.addEventListener("mousemove", onMouseMove);
+	for (let i = 0; i < $hoverables.length; i++) {
+		$hoverables[i].addEventListener("mouseenter", onMouseHover);
+		$hoverables[i].addEventListener("mouseleave", onMouseHoverOut);
+	}
+} else {
+	var cursor = document.getElementById("cursor");
+	cursor.style.display = "none";
 }
 
 // Move the cursor
@@ -33,4 +38,16 @@ function onMouseHoverOut() {
 	TweenMax.to($bigBall, 0.3, {
 		scale: 1,
 	});
+}
+
+function isOnMobile() {
+	if (
+		/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+			navigator.userAgent
+		)
+	) {
+		return true;
+	} else {
+		return false;
+	}
 }
