@@ -1,6 +1,10 @@
 .home {
 	margin-top: 4rem;
 
+	@media (min-width: 1400px) {
+		margin-top: 15vh;
+	}
+
 	.introduction-wrap {
 		.introduction {
 			padding-left: 2rem;

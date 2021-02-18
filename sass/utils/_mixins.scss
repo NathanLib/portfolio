@@ -1,10 +1,3 @@
-@mixin heading-shadow(
-	$colour: lightness-shift($colour-neutrals-black-10),
-	$offset: $heading-shadow-size
-) {
-	text-shadow: $offset $offset $colour-neutrals-white;
-}
-
 @mixin fluid-font(
 	$responsive,
 	$min,
@@ -38,25 +31,6 @@
 	line-height: calc(#{$responsive-unitless}vw + 8px);
 }
 
-@mixin border($colour: $colour-neutrals-white) {
-	border: 0.1rem solid $colour;
-}
-
-@mixin img-ratio {
-	width: 100%;
-	display: block;
-	overflow: hidden;
-	padding-top: 56.25%;
-	position: relative;
-	& img {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		width: 100%;
-		transform: translate(-50%, -50%);
-	}
-}
-
 @mixin states {
 	cursor: pointer;
 
@@ -66,7 +40,7 @@
 	}
 
 	&:active {
-		transform: scale(1.025);
+		transform: scale(0.95);
 	}
 }
 

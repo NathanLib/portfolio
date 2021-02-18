@@ -19,14 +19,14 @@ function onMouseMove(e) {
 	});
 	TweenMax.to($smallBall, 0.1, {
 		x: e.pageX - 5,
-		y: e.pageY - 7,
+		y: e.pageY - 5,
 	});
 }
 
 // Hover an element
 function onMouseHover() {
 	TweenMax.to($bigBall, 0.3, {
-		scale: 4,
+		scale: 1.75,
 	});
 }
 function onMouseHoverOut() {
