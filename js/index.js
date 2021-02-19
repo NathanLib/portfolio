@@ -5,6 +5,8 @@ $(window).on("load", function () {
 	$("#nav-toggler").on("click", () => {
 		$("#menu-toggle").toggleClass("display-none");
 	});
+
+	$(".copyright").text(new Date().getFullYear());
 });
 
 // $("#switch-mode").on("click", () => {
