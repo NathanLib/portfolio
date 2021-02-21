@@ -2,36 +2,105 @@
 	h1 {
 		margin: 4rem 0;
 	}
-	.skills__card {
-		margin-bottom: 3rem;
 
-		&--title {
+	h3 {
+		margin-bottom: 2rem;
+	}
+
+	.skills {
+		&__card {
+			margin-bottom: 3rem;
+
+			&--title {
+				display: flex;
+				align-items: baseline;
+				margin-bottom: 1rem;
+			}
+
+			&--description {
+				padding: 0 1.5rem;
+				margin-bottom: 1.5rem;
+			}
+
+			&--highlights {
+				padding-right: 1.5rem;
+				color: $colour-neutrals-white;
+
+				li {
+					display: flex;
+					align-items: center;
+					margin-top: 1rem;
+				}
+
+				.long-dash {
+					width: 6rem;
+					height: 1px;
+					margin-right: 1.5rem;
+					background-color: $colour-neutrals-white-30;
+				}
+			}
+		}
+	}
+
+	.references {
+		position: relative;
+
+		h3 {
+			text-align: right;
+		}
+
+		&__card {
+			background-color: $colour-neutrals-black-10;
+			border-radius: 0.75rem;
+			overflow: hidden;
 			display: flex;
-			align-items: baseline;
-			margin-bottom: 1rem;
-		}
+			flex-direction: column;
+			box-shadow: 0px 4px 8px 4px rgba(0, 0, 0, 0.25),
+				0px 8px 64px 4px #050d17;
 
-		&--description {
-			padding: 0 1.5rem;
-			margin-bottom: 1.5rem;
-		}
-
-		&--highlights {
-			padding-right: 1.5rem;
-			color: $colour-neutrals-white;
-
-			li {
+			&--author {
 				display: flex;
 				align-items: center;
-				margin-top: 1rem;
+
+				img {
+					margin-right: 1.5rem;
+				}
+
+				h5 {
+					margin-bottom: 0.25rem;
+				}
 			}
 
-			.long-dash {
-				width: 6rem;
-				height: 1px;
-				margin-right: 1.5rem;
-				background-color: $colour-neutrals-white-30;
+			&--text {
+				padding: 1.5rem;
+				text-align: justify;
 			}
+
+			button {
+				color: $colour-neutrals-white;
+				padding: 0.5rem 0.5rem 0.5rem 1rem;
+				margin: 0 1.5rem 1rem 0;
+				display: flex;
+				border-radius: 0.25rem;
+				align-self: flex-end;
+
+				@include states;
+
+				img {
+					margin-left: 0.5rem;
+				}
+
+				&:hover img {
+					transform: translateX(2px);
+				}
+			}
+		}
+
+		.dots {
+			position: absolute;
+			top: 5rem;
+			right: -0.75rem;
+			mix-blend-mode: color-dodge;
 		}
 	}
 }
