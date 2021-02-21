@@ -1,2 +1,37 @@
 .about-me {
+	h1 {
+		margin: 4rem 0;
+	}
+	.skills__card {
+		margin-bottom: 3rem;
+
+		&--title {
+			display: flex;
+			align-items: baseline;
+			margin-bottom: 1rem;
+		}
+
+		&--description {
+			padding: 0 1.5rem;
+			margin-bottom: 1.5rem;
+		}
+
+		&--highlights {
+			padding-right: 1.5rem;
+			color: $colour-neutrals-white;
+
+			li {
+				display: flex;
+				align-items: center;
+				margin-top: 1rem;
+			}
+
+			.long-dash {
+				width: 6rem;
+				height: 1px;
+				margin-right: 1.5rem;
+				background-color: $colour-neutrals-white-30;
+			}
+		}
+	}
 }
