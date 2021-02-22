@@ -102,5 +102,27 @@
 			right: -0.75rem;
 			mix-blend-mode: color-dodge;
 		}
+
+		.lines {
+			position: absolute;
+			left: -8px;
+			transform: translateY(-40px);
+		}
+	}
+}
+
+.lathe {
+	z-index: -1;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 70vh;
+
+	@media (min-width: 992px) {
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		width: 45vw;
+		max-width: 700px;
 	}
 }
