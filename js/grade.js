@@ -1,5 +1,5 @@
 import Grade from "grade-js";
 
-window.onload = (event) => {
+$(window).on("load", function () {
 	Grade(document.querySelectorAll(".gradient-wrap"));
-};
+});

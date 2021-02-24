@@ -1,40 +1,59 @@
 // Help from : https://codepen.io/dazulu/pen/VVZrQv
 
-var jquery = require("jquery");
-window.$ = window.jQuery = jquery;
-
 const range = 25;
 const calcValue = (a, b) => ((a / b) * range - range / 2).toFixed(1);
 
 $(window).on("load", function () {
-	$(".work-card").on({
-		mousemove: function (e) {
-			var xValue = calcValue(e.offsetX, 375);
-			var yValue = calcValue(e.offsetY, 375);
+	var timeout;
 
-			$(this).css(
-				"transform",
-				"rotateX(" + xValue + "deg) rotateY(" + yValue + "deg)"
-			);
+	$(".work__card").on(
+		{
+			mousemove: function (e) {
+				if (timeout) {
+					window.cancelAnimationFrame(timeout);
+				}
 
-			$(this)
-				.find("img")
-				.css(
-					"transform",
-					"translateX(" + xValue + "px) translateY(" + yValue + "px)"
-				);
+				var xValue = calcValue(e.offsetX, Math.ceil($(this).width()));
+				var yValue = calcValue(e.offsetY, Math.ceil($(this).height()));
 
-			$(this).find(".work-card-overlay").css("display", "flex");
+				timeout = window.requestAnimationFrame(() => {
+					if ($("body").width() > 568) {
+						$(this).css(
+							"transform",
+							"rotateX(" +
+								xValue +
+								"deg) rotateY(" +
+								yValue +
+								"deg)"
+						);
+
+						$(this)
+							.find("img")
+							.css(
+								"transform",
+								"translateX(" +
+									xValue +
+									"px) translateY(" +
+									yValue +
+									"px)"
+							);
+					}
+
+					$(this).find(".work__card--overlay").css("display", "flex");
+				});
+			},
+
+			mouseleave: function () {
+				// Probleme de détection sur safari
+				$(this).css("transform", "rotateX(0) rotateY(0)");
+
+				$(this)
+					.find("img")
+					.css("transform", "translateX(0) translateY(0)");
+
+				$(this).find(".work__card--overlay").css("display", "none");
+			},
 		},
-
-		mouseleave: function () {
-			$(this).css("transform", "rotateX(0deg) rotateY(0deg)");
-
-			$(this)
-				.find("img")
-				.css("transform", "translateX(0px) translateY(0px)");
-
-			$(this).find(".work-card-overlay").css("display", "none");
-		},
-	});
+		false
+	);
 });

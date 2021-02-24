@@ -12,7 +12,6 @@ html {
 }
 
 body {
-	position: relative;
 	box-sizing: border-box;
 	background: $colour-neutrals-black;
 	padding: $body-padding;
@@ -21,6 +20,10 @@ body {
 	@media (min-width: 768px) {
 		padding: $body-padding-large;
 	}
+}
+
+#body-relative {
+	position: relative;
 }
 
 a {
