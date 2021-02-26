@@ -70,6 +70,32 @@
 					}
 				}
 			}
+
+			.download-resume {
+				display: flex;
+				align-items: baseline;
+
+				a {
+					color: $colour-neutrals-white;
+					display: flex;
+					align-items: center;
+					width: min-content;
+					padding: 0.25rem 0.75rem;
+					margin-left: 0.25rem;
+					margin-top: 0.5rem;
+					border-radius: 0.25rem;
+
+					@include states;
+
+					img {
+						margin-left: 0.25rem;
+					}
+
+					&:hover img {
+						transform: translate(2px, -2px);
+					}
+				}
+			}
 		}
 	}
 
@@ -87,9 +113,7 @@
 	}
 
 	footer {
-		position: absolute;
-		bottom: 1.5rem;
-		margin-top: 2rem;
+		margin-top: 4rem;
 
 		.author {
 			font-weight: bold;

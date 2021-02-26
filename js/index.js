@@ -7,6 +7,10 @@ $(window).on("load", function () {
 	});
 
 	$(".copyright").text(new Date().getFullYear());
+
+	$(".reference-next").on("click", () => {
+		$("#reference-johan, #reference-john").toggleClass("d-none");
+	});
 });
 
 // $("#switch-mode").on("click", () => {

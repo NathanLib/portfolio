@@ -13,10 +13,14 @@ $(window).on("load", function () {
 					window.cancelAnimationFrame(timeout);
 				}
 
-				var xValue = calcValue(e.offsetX, Math.ceil($(this).width()));
-				var yValue = calcValue(e.offsetY, Math.ceil($(this).height()));
+				var width = $(this).width();
+				var height = $(this).height();
+
+				var xValue = calcValue(e.offsetX, width);
+				var yValue = calcValue(e.offsetY, height);
 
 				timeout = window.requestAnimationFrame(() => {
+					// Limit size to avoid bugs on small screens
 					if ($("body").width() > 568) {
 						$(this).css(
 							"transform",
